@@ -1,6 +1,7 @@
 function About() {
     return (
         <section>
+            <br /><br />
             <h2>About Me</h2>
 
             <p>
