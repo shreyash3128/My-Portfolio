@@ -4,24 +4,31 @@ import About from './components/About'
 import ProjectCard from './components/ProjectCard'
 
 const App = () => {
+  const projects = [
+    {
+      title: "Expense Tracker",
+      description: "An application to manage personal expenses.",
+    },
+    {
+      title: "PureHue",
+      description: "A skincare related web application.",
+    },
+    {
+      title: "Tomato",
+      description: "A food delivery web application.",
+    },
+  ];
   return (
     <div>
       <Hero/>
       <About/>
-      <ProjectCard
-        title="Expense Tracker"
-        description="An application to manage personal expenses."
-      />
-
-      <ProjectCard
-        title="PureHue"
-        description="A skincare related web application."
-      />
-
-      <ProjectCard
-        title="Tomato"
-        description="A food delivery web application."
-      />
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          title={project.title}
+          description={project.description}
+        />
+      ))}
     </div>
   )
 }
