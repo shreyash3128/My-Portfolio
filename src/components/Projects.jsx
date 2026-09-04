@@ -1,13 +1,17 @@
 import React from 'react'
 import projects from '../data/projects'
 import ProjectCard from './ProjectCard'
+import SectionHeading from './SectionHeading'
 
 
 const Projects = () => {
   return (
     <section className='py-5'>
         <div className="container">
-            <h2 className="text-center mb-4 fs-1">My Projects</h2>
+              <SectionHeading
+                  title="My Projects"
+                  subtitle="A few projects I have worked on."
+              />
             <div className="row g-4">
                 {projects.map((project) => (
                     <div className="col-12 col-md-6 col-lg-4"

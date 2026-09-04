@@ -1,8 +1,10 @@
+import SectionHeading from "./SectionHeading";
+
 function About() {
     return (
         <section>
             <br /><br />
-            <h2>About Me</h2>
+            <SectionHeading title="About Me"/>
 
             <p>
                 I am a Software Developer passionate about
