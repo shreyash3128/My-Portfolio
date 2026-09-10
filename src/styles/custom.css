@@ -383,7 +383,7 @@ a {
     aspect-ratio: 4 / 5;
     border-radius: 28px;
     object-fit: cover;
-    object-position: center 8%;
+    object-position: center;
     transform-origin: center center;
     animation: kenburns 18s ease-in-out infinite alternate;
 }
@@ -652,6 +652,10 @@ a {
     .float-bottom {
         right: -2%;
     }
+
+    .hero-visual-col{
+        order: 2;
+    }
 }
 
 /* =========================================================
@@ -800,5 +804,307 @@ a {
     .hero-glow,
     .btn-x {
         transition: none !important;
+    }
+}
+
+/* =========================================================
+   NAVBAR - FINAL RESPONSIVE VERSION
+========================================================= */
+
+.site-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99999;
+    background: rgba(6, 10, 19, 0.92);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* Main Navbar Row */
+.navbar-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 74px;
+    gap: 1.5rem;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-brand-x {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid rgba(245, 168, 60, 0.65);
+    border-radius: 11px;
+    background: rgba(245, 168, 60, 0.05);
+    color: var(--amber);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.brand-text {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.brand-text span {
+    color: var(--amber);
+}
+
+/* =========================================================
+   DESKTOP NAV LINKS
+========================================================= */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, 1.4vw, 1.5rem);
+    margin-left: auto;
+}
+
+.navbar-link {
+    position: relative;
+    padding: 0.4rem 0;
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.navbar-link:hover {
+    color: var(--text);
+}
+
+.navbar-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--amber);
+    transition: width 0.3s var(--ease);
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   LET'S TALK
+========================================================= */
+
+.navbar-talk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding: 0.68rem 1.2rem;
+    border: 1px solid rgba(245, 168, 60, 0.55);
+    border-radius: 999px;
+    color: var(--amber-soft);
+    font-size: 0.84rem;
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: 0.3s var(--ease);
+}
+
+.navbar-talk-btn:hover {
+    background: var(--amber);
+    color: #171207;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.navbar-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    padding: 0;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    background: rgba(14, 22, 38, 0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    appearance: none;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 19px;
+    height: 2px;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: #ffffff;
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+
+/* Hamburger → X */
+.navbar-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   TABLET + MOBILE
+========================================================= */
+
+@media screen and (max-width: 991.98px) {
+    .site-navbar {
+        display: block !important;
+    }
+
+    .navbar-inner {
+        display: flex !important;
+        min-height: 68px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide desktop CTA */
+    .navbar-talk-btn {
+        display: none !important;
+    }
+
+    /* SHOW hamburger */
+    .navbar-toggle {
+        display: flex !important;
+        position: relative;
+        z-index: 100002;
+    }
+
+    /* Dropdown menu */
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 100001;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        margin: 0;
+        padding: 0.7rem 1.25rem 1rem;
+        background: rgba(6, 10, 19, 0.98);
+        border-top: 1px solid rgba(148, 163, 184, 0.08);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 22px 40px rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+    }
+
+    .navbar-links.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .navbar-link {
+        display: block;
+        width: 100%;
+        padding: 0.9rem 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+        color: var(--text);
+        font-size: 0.9rem;
+    }
+
+    .navbar-link:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-link::after {
+        display: none;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 575.98px) {
+    .navbar-inner {
+        min-height: 64px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        font-size: 0.75rem;
+    }
+
+    .brand-text {
+        font-size: 0.88rem;
+    }
+
+    .navbar-toggle {
+        width: 39px;
+        height: 39px;
+    }
+
+    .navbar-links {
+        padding: 0.65rem 1rem 0.9rem;
+    }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 350px) {
+    .brand-text {
+        display: none;
     }
 }
