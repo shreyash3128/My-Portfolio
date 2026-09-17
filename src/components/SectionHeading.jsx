@@ -1,12 +1,20 @@
-import React from 'react'
 
-const SectionHeading = ({title, subtitle}) => {
+function SectionHeading({ index, eyebrow, title, description }) {
   return (
-   <div className="text-center mb-4">
-    <h2>{title}</h2>
-    {subtitle && <p>{subtitle}</p>}
-   </div>
-  )
+    <div className="section-head">
+      <p className="eyebrow">
+        <span className="eyebrow-index">{index}</span>
+        <span className="eyebrow-line" aria-hidden="true" />
+        <span className="eyebrow-label">{eyebrow}</span>
+      </p>
+
+      <h2 className="section-title">{title}</h2>
+
+      {description && (
+        <p className="section-desc">{description}</p>
+      )}
+    </div>
+  );
 }
 
-export default SectionHeading
+export default SectionHeading;
