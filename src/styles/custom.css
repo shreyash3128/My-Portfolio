@@ -1372,3 +1372,51 @@ a {
         transition: none;
     }
 }
+
+/* ================================
+   SCROLL REVEAL
+================================ */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(28px);
+
+    transition:
+        opacity 0.85s var(--ease),
+        transform 0.85s var(--ease);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+/* LEFT */
+
+.reveal-left {
+    transform: translateX(-34px);
+}
+
+
+/* RIGHT */
+
+.reveal-right {
+    transform: translateX(34px);
+}
+
+
+/* SCALE */
+
+.reveal-scale {
+    transform: scale(0.94);
+}
+
+
+/* VISIBLE STATE */
+
+.reveal.is-visible {
+    opacity: 1;
+
+    transform: none;
+}
