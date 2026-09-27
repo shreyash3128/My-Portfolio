@@ -59,7 +59,12 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     font-family: var(--font-display);
     color: var(--text);
@@ -653,7 +658,7 @@ a {
         right: -2%;
     }
 
-    .hero-visual-col{
+    .hero-visual-col {
         order: 2;
     }
 }
@@ -1215,7 +1220,7 @@ a {
    CODE EDITOR CARD
 ================================ */
 
-.code-card-wrap {   
+.code-card-wrap {
     transition: transform 0.5s var(--ease);
     border: 1px solid var(--line);
     border-radius: 20px;
@@ -1419,4 +1424,516 @@ a {
     opacity: 1;
 
     transform: none;
+}
+
+/* =================================
+   SKILLS SECTION
+================================= */
+
+.section-skills {
+    background:
+        linear-gradient(180deg,
+            rgba(148, 163, 184, 0.03),
+            rgba(148, 163, 184, 0.012));
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* CARD */
+
+.skill-card {
+    --cat-color: var(--amber);
+
+    height: 100%;
+    padding: 1.6rem;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+
+    transition:
+        transform 0.4s var(--ease),
+        border-color 0.4s var(--ease),
+        box-shadow 0.4s var(--ease);
+}
+
+
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        color-mix(in srgb,
+            var(--cat-color) 45%,
+            transparent);
+
+    box-shadow:
+        0 26px 54px -26px rgba(0, 0, 0, 0.65),
+        0 16px 44px -20px color-mix(in srgb,
+            var(--cat-color) 40%,
+            transparent);
+}
+
+
+/* CARD HEADER */
+
+.skill-card-head {
+    display: flex;
+    align-items: center;
+
+    gap: 0.9rem;
+
+    margin-bottom: 1.15rem;
+}
+
+
+.skill-card-icon {
+    display: grid;
+    place-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    font-size: 1.25rem;
+
+    color: var(--cat-color);
+
+    background:
+        color-mix(in srgb,
+            var(--cat-color) 12%,
+            transparent);
+
+    border:
+        1px solid color-mix(in srgb,
+            var(--cat-color) 32%,
+            transparent);
+
+    transition:
+        transform 0.4s var(--ease);
+}
+
+
+.skill-card:hover .skill-card-icon {
+    transform:
+        rotate(-8deg) scale(1.07);
+}
+
+
+.skill-card-title {
+    margin: 0;
+
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+
+.skill-card-blurb {
+    margin: 0.1rem 0 0;
+
+    font-size: 0.8rem;
+
+    color: var(--faint);
+}
+
+
+/* SKILL LIST */
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.3rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.skill-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.85rem;
+
+    padding: 0.5rem 0.7rem;
+
+    border-radius: var(--radius-sm);
+
+    transition:
+        background-color 0.3s var(--ease),
+        transform 0.3s var(--ease);
+}
+
+
+.skill-item:hover {
+    background:
+        color-mix(in srgb,
+            var(--cat-color) 9%,
+            transparent);
+
+    transform: translateX(5px);
+}
+
+
+/* SMALL SKILL TILE */
+
+.skill-tile {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    font-family: var(--font-display);
+
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    color: var(--cat-color);
+
+    background:
+        color-mix(in srgb,
+            var(--cat-color) 13%,
+            transparent);
+
+    border:
+        1px solid color-mix(in srgb,
+            var(--cat-color) 34%,
+            transparent);
+
+    transition:
+        transform 0.35s var(--ease),
+        box-shadow 0.35s var(--ease);
+}
+
+
+.skill-item:hover .skill-tile {
+    transform:
+        scale(1.08) rotate(-4deg);
+
+    box-shadow:
+        0 8px 20px -8px color-mix(in srgb,
+            var(--cat-color) 55%,
+            transparent);
+}
+
+
+.skill-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    color: #d3dcec;
+}
+
+
+/* SMALL DOT */
+
+.skill-spark {
+    margin-left: auto;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--cat-color);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s var(--ease);
+}
+
+.skill-item:hover .skill-spark {
+    opacity: 1;
+}
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.section-education {
+    position: relative;
+}
+
+/* Education List */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 3.5rem;
+}
+
+.education-showcase {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 900px);
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.education-list .education-showcase {
+    margin-bottom: 1.4rem;
+}
+
+/* =========================================================
+   LEFT TIMELINE
+========================================================= */
+
+.education-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.education-icon {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 50%;
+    background: #0d1729;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    color: var(--amber);
+    font-size: 1.25rem;
+}
+
+.education-icon::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 1px solid rgba(245, 168, 60, 0.06);
+    border-radius: inherit;
+}
+
+.education-line {
+    flex: 1;
+    width: 1px;
+    min-height: 80px;
+    margin-top: 9px;
+    background: linear-gradient(180deg,
+            var(--amber),
+            rgba(245, 168, 60, 0.15));
+}
+
+/* =========================================================
+   EDUCATION CARD
+========================================================= */
+
+.education-main {
+    width: 100%;
+}
+
+.degree-card {
+    margin-bottom: 0.5rem;
+    padding: 1.65rem 1.85rem;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 20px;
+    background: #0d1729;
+    box-shadow: 0 20px 45px -30px rgba(0, 0, 0, 0.75);
+    transition:
+        transform 0.4s var(--ease),
+        border-color 0.4s var(--ease),
+        box-shadow 0.4s var(--ease);
+}
+
+.degree-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 168, 60, 0.25);
+    box-shadow: 0 24px 55px -30px rgba(245, 168, 60, 0.18);
+}
+
+/* Card Header */
+.degree-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.degree-title {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.degree-specialization {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Date */
+.degree-period {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-shrink: 0;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 999px;
+    background: rgba(6, 10, 19, 0.2);
+    color: #aab6cc;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.degree-period i,
+.degree-college i {
+    color: var(--amber);
+}
+
+/* College */
+.degree-college {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+/* Bottom */
+.degree-bottom {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.4rem;
+}
+
+/* Score */
+.degree-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(245, 168, 60, 0.35);
+    border-radius: 15px;
+    background: rgba(245, 168, 60, 0.07);
+}
+
+.degree-score strong {
+    color: var(--amber);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.degree-score span {
+    margin-top: 0.35rem;
+    color: var(--faint);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+}
+
+.degree-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767.98px) {
+    .education-list {
+        margin-top: 2.5rem;
+    }
+
+    .education-showcase {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .education-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .degree-card {
+        padding: 1.25rem;
+    }
+
+    .degree-card-top {
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .degree-period {
+        align-self: flex-start;
+    }
+
+    .degree-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .degree-score {
+        min-width: 115px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .education-list {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .education-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .education-rail {
+        display: none;
+    }
+
+    .degree-title {
+        font-size: 1.05rem;
+    }
+
+    .degree-specialization {
+        font-size: 0.84rem;
+    }
+
+    .degree-college {
+        align-items: flex-start;
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    .degree-period {
+        font-size: 0.65rem;
+    }
+
+    .degree-note {
+        font-size: 0.8rem;
+    }
 }

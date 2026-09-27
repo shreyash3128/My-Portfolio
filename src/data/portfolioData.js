@@ -21,7 +21,7 @@ export const profile = {
 
     heroIntro:
         "I'm a software engineer specializing in Full Stack Development with React.js, Django and Python — building responsive web experiences with JavaScript, HTML5, CSS3 and MySQL, from pixel-tuned front-ends to reliable back-ends.",
-  };
+};
 
 
 export const about = {
@@ -82,3 +82,102 @@ export const about = {
         ],
     },
 };
+
+export const skillCategories = [
+    {
+        title: "Programming Languages",
+        icon: "bi-code-slash",
+        color: "#f5a83c",
+        blurb: "The languages I think in.",
+        skills: [
+            { name: "Python", code: "Py" },
+            { name: "JavaScript", code: "JS" },
+            { name: "C", code: "C" },
+            { name: "C++", code: "C+" },
+        ],
+    },
+
+    {
+        title: "Frontend",
+        icon: "bi-vector-pen",
+        color: "#64b5f6",
+        blurb: "Interfaces that feel polished.",
+        skills: [
+            { name: "HTML5", code: "H5" },
+            { name: "CSS3", code: "C3" },
+            { name: "Bootstrap", code: "BS" },
+            { name: "React.js", code: "Re" },
+        ],
+    },
+
+    {
+        title: "Backend",
+        icon: "bi-hdd-network",
+        color: "#45d0b5",
+        blurb: "Reliable servers & APIs.",
+        skills: [
+            { name: "Django", code: "Dj" },
+        ],
+    },
+
+    {
+        title: "Database",
+        icon: "bi-database",
+        color: "#f97b5f",
+        blurb: "Structured, queryable data.",
+        skills: [
+            { name: "MySQL", code: "My" },
+        ],
+    },
+
+    {
+        title: "CMS",
+        icon: "bi-file-earmark-richtext",
+        color: "#b5d96b",
+        blurb: "Customizable client sites.",
+        skills: [
+            { name: "WordPress", code: "Wp" },
+        ],
+    },
+
+    {
+        title: "Tools & Technologies",
+        icon: "bi-tools",
+        color: "#94a3b8",
+        blurb: "The daily drivers.",
+        skills: [
+            { name: "Git", code: "Gi" },
+            { name: "GitHub", code: "Gh" },
+            { name: "VS Code", code: "VS" },
+        ],
+    },
+];
+
+export const education = [
+    {
+        period: "2021 — 2025",
+        degree: "B.Tech in Electronics & Telecommunication Engineering",
+        institution: "Bharati Vidyapeeth's College of Engineering, Kolhapur",
+        score: "CGPA: 8.33 / 10",
+        description:
+            "Built a strong engineering foundation while developing practical skills in programming, electronics, problem solving and software development.",
+    },
+
+    {
+        period: "2019 — 2021",
+        degree: "Higher Secondary Certificate (HSC)",
+        institution: "Vivekanand College, Kolhapur",
+        score: "90.67%",
+        description:
+            "Completed higher secondary education with a strong academic foundation.",
+    },
+
+    {
+        period: "2019",
+        degree: "Secondary School Certificate (SSC)",
+        institution: "Maharashtra High School, Kolhapur",
+        score: "87.60%",
+        description:
+            "Completed secondary education with a strong academic performance.",
+    },
+];
