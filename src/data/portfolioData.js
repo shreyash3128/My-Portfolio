@@ -203,3 +203,61 @@ export const experiences = [
         ],
     },
 ];
+
+import pureHueImage from "../assets/images/PureHue.jpg";
+import TomatoImage from "../assets/images/Tomato.png";
+import ExpenseTracker from "../assets/images/ExpenseTracker.png";
+export const projects = [
+    {
+        title: "PureHue",
+        subtitle: "Dynamic Product Visualization Web App",
+        category: "Interactive UI",
+        image: pureHueImage,
+
+        technologies: ["HTML", "CSS", "JavaScript"],
+
+        highlights: [
+            "Built an interactive product showcase with real-time UI color and theme updates.",
+            "Applied modular CSS and JavaScript for scalable and consistent design.",
+        ],
+
+        liveUrl: "https://shreyash3128.github.io/PureHue/",
+        githubUrl: "https://github.com/shreyash3128/PureHue",
+    },
+
+    {
+        title: "Tomato",
+        subtitle: "Food Delivery Web Application",
+        category: "React · Context API",
+        image: TomatoImage,
+
+        technologies: ["React.js"],
+
+        highlights: [
+            "Developed a responsive food delivery web application using React.js.",
+            "Implemented dynamic cart management with real-time price calculation.",
+            "Used React Context API and reusable components for scalable state management.",
+        ],
+
+        liveUrl: "https://tomato-food-delivery-web-applicatio.vercel.app/",
+        githubUrl: "https://github.com/shreyash3128/Tomato.-Food-Delivery-Web-Application",
+    },
+
+    {
+        title: "Expense Tracker",
+        subtitle: "Full-Stack Web Application",
+        category: "Full-Stack · CRUD",
+        image: ExpenseTracker,
+
+        technologies: ["Python", "SQL", "HTML", "CSS", "JS"],
+
+        highlights: [
+            "Designed and developed a full-stack web application to track personal expenses.",
+            "Implemented CRUD functionality with category-wise and monthly expense analysis.",
+            "Built a relational database schema for efficient data storage and retrieval.",
+        ],
+
+        liveUrl: "",
+        githubUrl: "https://github.com/shreyash3128/Expense-Tracker-Web-Application",
+    },
+];

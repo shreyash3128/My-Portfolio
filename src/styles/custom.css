@@ -2253,3 +2253,223 @@ a {
         font-size: 0.85rem;
     }
 }
+
+/* =========================================================
+   PROJECTS SECTION
+========================================================= */
+
+.section-projects {
+    position: relative;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    transition:
+        transform 0.4s var(--ease),
+        border-color 0.4s var(--ease),
+        box-shadow 0.4s var(--ease);
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 168, 60, 0.35);
+    box-shadow: 0 25px 55px -32px rgba(245, 168, 60, 0.28);
+}
+
+/* Project Image & Visual Header */
+
+.project-visual {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background: #080e19;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.6s var(--ease),
+        filter 0.6s var(--ease);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.035);
+}
+
+.project-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(6, 10, 19, 0.05),
+            rgba(6, 10, 19, 0.08) 50%,
+            rgba(6, 10, 19, 0.75));
+    pointer-events: none;
+}
+
+/* Project Number */
+
+.project-number {
+    position: absolute;
+    top: 1rem;
+    left: 1.25rem;
+    z-index: 2;
+    color: rgba(233, 238, 249, 0.30);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Category Pill */
+
+.project-category {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.25rem;
+    z-index: 2;
+    margin: 0;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(245, 168, 60, 0.3);
+    border-radius: 999px;
+    background: rgba(6, 10, 19, 0.82);
+    backdrop-filter: blur(8px);
+    color: #d9dfeb;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+/* Content Body */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Ensures equal height stretching */
+    padding: 1.6rem;
+}
+
+.project-title {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.project-subtitle {
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+/* Tech Stack Badges */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+}
+
+.project-tech-item {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 999px;
+    color: #b5c0d4;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+}
+
+/* Highlights List */
+
+.project-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.project-bullet {
+    flex-shrink: 0;
+    color: var(--amber);
+}
+
+/* External Action Links */
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: auto;
+    /* Pushes links to the bottom of the card */
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-decoration: none;
+    transition:
+        color 0.3s var(--ease),
+        border-color 0.3s var(--ease),
+        background-color 0.3s var(--ease);
+}
+
+.project-links a:hover {
+    border-color: rgba(245, 168, 60, 0.4);
+    background: rgba(245, 168, 60, 0.07);
+    color: var(--amber);
+}
+
+/* Responsive Breakpoints */
+
+@media (max-width: 991.98px) {
+    .project-visual {
+        height: 250px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .project-visual {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 1.3rem;
+    }
+
+    .project-title {
+        font-size: 1.15rem;
+    }
+}
