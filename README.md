@@ -9,7 +9,7 @@ Vite and Bootstrap.
 
 ## Preview
 
-[Portfolio Screenshot]
+![Shreyash Gurav Portfolio Preview](./src/assets/images/portfolio-preview.png)
 
 ## Features
 
