@@ -1,3 +1,4 @@
+import logo from "../assets/images/sitelogo.png";
 import { useState } from "react";
 
 const navLinks = [
@@ -14,7 +15,7 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen((prev) => !prev);
     };
 
     const closeMenu = () => {
@@ -30,18 +31,16 @@ function Navbar() {
                     href="#home"
                     className="navbar-brand-x"
                     onClick={closeMenu}
+                    aria-label="Shreyash Gurav - Home"
                 >
-                    <span className="brand-mark">
-                        SG
-                    </span>
-
-                    <span className="brand-text">
-                        Shreyash<span>.dev</span>
-                    </span>
+                    <img
+                        src={logo}
+                        alt="Shreyash Gurav"
+                        className="navbar-logo-image"
+                    />
                 </a>
 
-
-                {/* Desktop / Mobile Links */}
+                {/* Navigation Links */}
                 <div
                     className={`navbar-links ${menuOpen ? "is-open" : ""
                         }`}
@@ -58,16 +57,15 @@ function Navbar() {
                     ))}
                 </div>
 
-
-                {/* Desktop CTA */}
+                {/* Let's Talk CTA - ONLY ONE */}
                 <a
                     href="#contact"
                     className="navbar-talk-btn"
+                    onClick={closeMenu}
                 >
                     Let's Talk
                     <span aria-hidden="true">→</span>
                 </a>
-
 
                 {/* Mobile Hamburger */}
                 <button
@@ -77,10 +75,11 @@ function Navbar() {
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
                     aria-expanded={menuOpen}
+                    aria-controls="navbar-navigation"
                 >
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span />
+                    <span />
+                    <span />
                 </button>
 
             </div>

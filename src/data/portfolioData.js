@@ -261,3 +261,48 @@ export const projects = [
         githubUrl: "https://github.com/shreyash3128/Expense-Tracker-Web-Application",
     },
 ];
+
+export const certifications = [
+    {
+        title: "Python Full Stack",
+        issuer: "QSpiders, Pune",
+        icon: "bi-patch-check-fill",
+        certificateUrl: "",
+    },
+    {
+        title: "C++ Programming",
+        issuer: "Exel Computers",
+        icon: "bi-code-slash",
+        certificateUrl: "",
+    },
+    {
+        title: "Data Structures & Algorithms",
+        issuer: "Simpli Learn",
+        icon: "bi-award-fill",
+        certificateUrl: "https://drive.google.com/file/d/1W9_AS1HI312S8zWaKBI4WGq03rVVwsQx/view",
+    },
+];
+
+export const contact = {
+    heading: "Let's build something useful.",
+    description:
+        "I'm open to software development opportunities, collaborations and conversations about building great web experiences.",
+
+    email: "shreyashgurav317@gmail.com",
+    phone: "+91 70582 04125",
+    phoneHref: "tel:+917058204125",
+    location: "Kolhapur, Maharashtra",
+
+    socials: [
+        {
+            name: "GitHub",
+            icon: "bi-github",
+            url: "Yhttps://github.com/shreyash3128",
+        },
+        {
+            name: "LinkedIn",
+            icon: "bi-linkedin",
+            url: "https://www.linkedin.com/in/shreyash-gurav-057b80232/",
+        },
+    ],
+};
