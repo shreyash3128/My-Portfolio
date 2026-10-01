@@ -297,7 +297,7 @@ export const contact = {
         {
             name: "GitHub",
             icon: "bi-github",
-            url: "Yhttps://github.com/shreyash3128",
+            url: "https://github.com/shreyash3128",
         },
         {
             name: "LinkedIn",
